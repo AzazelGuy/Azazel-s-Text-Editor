@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
     while (true){
 
-        cout << "------------Azazel's To Do List------------" << endl;
+        cout << "-----------------------------TextZel-------------------------------" << endl;
         cout << "Comandos\n:save Salvar | :exit Sair | :undo Desfazer | :delete N Deletar linha | :edit N editar linha | :load <caminho> carrega um arquivo" << endl;
 
         for (size_t i = 0; i < linhas.size(); ++i)
@@ -103,8 +103,9 @@ int main(int argc, char* argv[])
         }
         else if (comando == ":save")
         {
+            cout << "Enter the name of the file: ";
             string fileLocation;
-            std::getline(ss, fileLocation);
+            std::getline(cin, fileLocation);
             if (!fileLocation.empty() && fileLocation[0] == ' ')
                 fileLocation = fileLocation.substr(1);
             
